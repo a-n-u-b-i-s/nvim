@@ -72,5 +72,6 @@ table.insert(plugins, { import = "config.mini-operators" })
 table.insert(plugins, { import = "config.ui" })
 -- table.insert(plugins, { import = "config.hardtime" })
 table.insert(plugins, { import = "config.git" })
+table.insert(plugins, { import = "config.org-mode" })
 
 require("lazy").setup(plugins)
