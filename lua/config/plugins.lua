@@ -32,6 +32,7 @@ local plugins = {
 					comments = false,
 					operators = false,
 					folds = false,
+					emphasis = false,
 				},
 			})
 		end,
@@ -40,7 +41,7 @@ local plugins = {
 		"savq/melange-nvim",
 		config = function()
 			vim.g.melange_enable_font_variants = false
-			vim.cmd("colorscheme gruvbox")
+			vim.cmd("colorscheme tokyonight-night")
 		end,
 	},
 }
