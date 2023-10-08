@@ -33,9 +33,6 @@ local plugins = {
 					operators = false,
 					folds = false,
 				},
-				palette_overrides = {
-					gray = "#2ea542", -- comments are green and by that I mean GREEN
-				},
 			})
 		end,
 	},
@@ -43,7 +40,7 @@ local plugins = {
 		"savq/melange-nvim",
 		config = function()
 			vim.g.melange_enable_font_variants = false
-			vim.cmd("colorscheme melange")
+			vim.cmd("colorscheme gruvbox")
 		end,
 	},
 }
