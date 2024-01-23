@@ -52,4 +52,8 @@ return {
       -- refer to the configuration section below
     },
   },
+  {
+    "mcchrish/zenbones.nvim",
+    dependencies = { "rktjmp/lush.nvim" },
+  },
 }
