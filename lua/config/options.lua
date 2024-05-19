@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 local options = {
-  aleph = 224, -- ascii code for aleph
+  -- aleph = 224, -- ascii code for aleph
   allowrevins = false, -- disable reverse insert mode
   ambiwidth = "single", -- all foreign charcters are the same width as US-ASCII
   autochdir = false, -- current nvim dir should stay as project dir
@@ -25,7 +25,7 @@ local options = {
   breakat = " ^I!@*-+;:,./?", -- create visual linebreaks at the following characters
   breakindent = true, -- wrapped lines continue at same horizontal visual indent
   breakindentopt = "", -- uses default breakindent options of min:20,shift:0,list:0
-  browsedir = "last", -- file browser should remember last position when reopened
+  -- browsedir = "last", -- file browser should remember last position when reopened
   bufhidden = "hide", -- don't unload buffer when not displayed
   buflisted = true, -- list the current buffer in the buffer list
   buftype = "", -- use normal buffers as the default
@@ -49,7 +49,7 @@ local options = {
   -- commentstring option should be the template string of "/*%s*/"
   complete = ".,w,b,u,U,k", -- scan all buffers & dictionary for completion
   completefunc = "", -- don't have any functions for completion
-  completeslash = "", -- completeslash should follow shellslash
+  -- completeslash = "", -- completeslash should follow shellslash
   completeopt = { -- completion suggestion options
     "menuone", -- always show completion popup menu
     "noselect", -- force a selection from the menu
@@ -130,8 +130,8 @@ local options = {
   icon = false, -- disable window icon
   iconstring = "", -- empty since icon is disabled
   ignorecase = true, -- by default ignore case in pattern matches
-  imcmdline = false, -- disabled since imdisable is true
-  imdisable = true, -- no need for inputs other than mouse / kb
+  -- imcmdline = false, -- disabled since imdisable is true
+  -- imdisable = true, -- no need for inputs other than mouse / kb
   iminsert = 0, -- IM is off since Input Methods are disabled
   imsearch = -1, -- always match IM insert
   inccommand = "nosplit", -- show the effects of the command incrementally in the buffer

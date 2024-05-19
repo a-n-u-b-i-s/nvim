@@ -205,4 +205,14 @@ return {
       -- see below for full list of options 👇
     },
   },
+  { "tiagovla/tokyodark.nvim" },
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({
+        disable_inline_completion = true,
+        disable_keymaps = true, -- disables built in keymaps for more manual control
+      })
+    end,
+  },
 }

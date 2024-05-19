@@ -73,7 +73,15 @@ return {
       inlay_hints = { enabled = false },
       -- tsserver will be automatically installed with mason and loaded with lspconfig
       servers = {
-        cssls = {},
+        cssls = {
+          settings = {
+            css = {
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+          },
+        },
         tailwindcss = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
@@ -110,6 +118,7 @@ return {
           },
         },
         html = {},
+        biome = {},
         yamlls = {
           settings = {
             yaml = {
@@ -203,6 +212,37 @@ return {
     opts = {},
     config = function(_, opts)
       require("lsp_signature").setup(opts)
+    end,
+  },
+  {
+    "vuki656/package-info.nvim",
+    requires = "MunifTanjim/nui.nvim",
+    config = function()
+      require("package-info").setup()
+    end,
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    opts = function(_, opts)
+      local nls = require("null-ls").builtins
+      opts.sources = { --override lazyvim's default sources
+        -- nls.code_actions.gitsigns,
+        -- go
+        nls.code_actions.gomodifytags,
+        nls.code_actions.impl,
+        nls.formatting.goimports,
+        nls.diagnostics.golangci_lint,
+        -- ts
+        nls.formatting.biome.with({
+          filetypes = { "javascript", "javascriptreact", "json", "jsonc", "typescript", "typescriptreact" },
+        }),
+        -- other
+        nls.formatting.stylua,
+        nls.formatting.shfmt.with({
+          filetypes = { "sh", "zsh" },
+        }),
+      }
+      return opts
     end,
   },
 }
